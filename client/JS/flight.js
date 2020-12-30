@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function getAllFlights() {
     $.ajax({
-        url: 'http://localhost:3000/api/flights/',
+        url: 'https://opensky1234.herokuapp.com/api/flights/',
         type: 'GET',
         success: function (flights) {
             recreateTable(flights);
@@ -68,7 +68,7 @@ function buyFlight(flightObj) {
 
 function getAllFlightsByFilter(str) {
     $.ajax({
-        url: `http://localhost:3000/api/flights/${str}`,
+        url: `https://opensky1234.herokuapp.com/api/flights/${str}`,
         type: 'GET',
         success: function(flights) {
             recreateTable(flights);

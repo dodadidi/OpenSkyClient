@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function getAllFeedbacks() {
     $.ajax({
-        url: 'http://localhost:3000/api/feedbacks',
+        url: 'https://opensky1234.herokuapp.com/api/feedbacks',
         type: 'GET',
         success: function (feedbacks) {
             recreateTable(feedbacks);
@@ -31,7 +31,7 @@ function recreateTable(feedbacks) {
 
 function getAllFeedbacksByFilter(str) {
     $.ajax({
-        url: `http://localhost:3000/api/feedbacks/${str}`,
+        url: `https://opensky1234.herokuapp.com/api/feedbacks/${str}`,
         type: 'GET',
         success: function(feedbacks) {
             recreateTable(feedbacks);
